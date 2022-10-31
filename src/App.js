@@ -201,6 +201,7 @@ function App() {
                     : input.value
                 }
                 onClick={() => setOpt(2)}
+                onKeyDown={(e) => handleKeyDown(e)}
               ></input>
               <select
                 className="my-3 w-1/4 border-2 border-blue-200 rounded-md"
