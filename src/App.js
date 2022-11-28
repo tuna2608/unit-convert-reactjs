@@ -42,31 +42,31 @@ function App() {
     switch (output.type) {
       case 'km':
         temp = temp * 0.001
-        temp = temp.toFixed(3)
+        // temp = temp.toFixed(3)
         break
       case 'hm':
         temp = temp * 0.01
-        temp = temp.toFixed(2)
+        // temp = temp.toFixed(2)
         break
       case 'dam':
         temp = temp * 0.1
-        temp = temp.toFixed(1)
+        // temp = temp.toFixed(1)
         break
       case 'm':
         temp = temp * 1
-        temp = temp.toFixed(0)
+        // temp = temp.toFixed(0)
         break
       case 'dm':
         temp = temp * 10
-        temp = temp.toFixed(0)
+        // temp = temp.toFixed(0)
         break
       case 'cm':
         temp = temp * 100
-        temp = temp.toFixed(0)
+        // temp = temp.toFixed(0)
         break
       case 'mm':
         temp = temp * 1000
-        temp = temp.toFixed(0)
+        // temp = temp.toFixed(0)
         break
     }
   }
@@ -82,14 +82,14 @@ function App() {
     if (isNaN(temp) === false) {
       setOutput({
         ...output,
-        val: temp,
+        val: temp.toFixed(3),
       })
       setList([
         ...list,
         {
           value1: input.val,
           type1: input.type,
-          value2: temp,
+          value2: temp.toFixed(3),
           type2: output.type,
         },
       ])
@@ -129,9 +129,7 @@ function App() {
     <>
       <div className="w-full h-screen flex flex-col justify-center items-center bg-grey-100">
         <div class="text-5xl font-extrabold ... pb-10">
-          <span class="bg-clip-text text-transparent 
-          bg-gradient-to-r from-blue-400 to-pink-500
-          ">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-pink-500">
             Unit Convert
           </span>
         </div>
